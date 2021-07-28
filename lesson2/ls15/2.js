@@ -1,0 +1,23 @@
+// Modify the program from the previous problem 
+// so that logReturnVal accepts an additional 
+// context argument. If you then run the program with turk as the context argument
+// , it should produce the desired output.
+
+let turk = {
+  firstName: 'Christopher',
+  lastName: 'Turk',
+  occupation: 'Surgeon',
+  getDescription() {
+    return this.firstName + ' ' + this.lastName + ' is a '
+                                  + this.occupation + '.';
+  }
+};
+
+function logReturnVal(context, func) {
+  let returnVal = func.call(context);
+  console.log(returnVal);
+}
+
+logReturnVal(turk, turk.getDescription);
+// The code below should output "Christopher Turk is a Surgeon"
+
