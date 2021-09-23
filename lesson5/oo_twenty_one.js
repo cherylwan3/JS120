@@ -1,5 +1,3 @@
-/* eslint-disable max-statements */
-/* eslint-disable max-lines-per-function */
 let readline = require("readline-sync");
 let shuffle = require('shuffle-array');
 
